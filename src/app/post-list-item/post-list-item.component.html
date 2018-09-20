@@ -7,7 +7,8 @@
   </div>
   <p>{{postItem.content}}</p>
   <p class="badge pull-right">{{postItem.loveIts}}</p>
-  <button class="btn btn-success" (click)="onLove()">love it</button>
-  <button class="btn btn-danger" (click)="onDontLove()">dont love it</button>
+  <button class="btn btn-success" (click)="onLove(postItem)">love it</button>
+  <button class="btn btn-danger" (click)="onDontLove(postItem)">dont love it</button>
+  <button class="btn btn-warning" (click)="onDeletePost(postItem)">Supprimer</button>
 </li>
 

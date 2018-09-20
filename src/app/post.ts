@@ -5,11 +5,11 @@ export class Post{
     loveIts: number;
     created_at: Date;
 
-    constructor(title, content, loveIts){
+    constructor(title, content){
 
         this.title=title;
         this.content=content;
-        this.loveIts=loveIts;
+        this.loveIts=0;
         this.created_at=new Date();
     }
 }

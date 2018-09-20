@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from './post';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -10,22 +11,20 @@ export class AppComponent {
   //title = 'myBlog';
  
 
+  constructor(){
 
-  posts=[
+     // Initialize Firebase
+     var config = {
+    apiKey: "AIzaSyBKfagqnknR0yh8t0U3SYwR2j_DuD87A3I",
+     authDomain: "http-blog.firebaseapp.com",
+     databaseURL: "https://http-blog.firebaseio.com",
+     projectId: "http-blog",
+     storageBucket: "http-blog.appspot.com",
+     messagingSenderId: "901788781474"
+   };
+   firebase.initializeApp(config);
+  }
+ 
 
-    new Post(
-      'France 24', 
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam laborum perferendis incidunt rem, itaque tenetur, vel rerum alias dicta doloribus sunt, eius sit quasi repellendus assumenda laudantium in sed ab.'
-      ,2),
-
-      new Post(
-        'RTG', 
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam laborum perferendis incidunt rem, itaque tenetur, vel rerum alias dicta doloribus sunt, eius sit quasi repellendus assumenda laudantium in sed ab.'
-      ,-1),
-    
-      new Post(
-        'Espace', 
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam laborum perferendis incidunt rem, itaque tenetur, vel rerum alias dicta doloribus sunt, eius sit quasi repellendus assumenda laudantium in sed ab.'
-        ,0)
-  ];
+  
 }
